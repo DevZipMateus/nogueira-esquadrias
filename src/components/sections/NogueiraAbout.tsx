@@ -91,7 +91,7 @@ const NogueiraAbout = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-6">
-                Nossa História de Sucesso
+                Nossa História
               </h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
@@ -122,13 +122,11 @@ const NogueiraAbout = () => {
             
             <div>
               <div className="relative">
-                <div className="aspect-square bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 flex items-center justify-center">
-                  <div className="text-center">
-                    <Award className="h-24 w-24 text-primary mx-auto mb-4" />
-                    <h4 className="text-2xl font-bold text-foreground mb-2">30 Anos</h4>
-                    <p className="text-muted-foreground">de Excelência no Mercado</p>
-                  </div>
-                </div>
+                <img 
+                  src="/lovable-uploads/59ff301f-c20d-4394-99f8-67f199e7781f.png" 
+                  alt="Alguns dos nossos serviços - Esquadrias em Alumínio, Box para banheiro, Pergolados, Sacadas"
+                  className="w-full h-auto rounded-2xl shadow-lg object-cover"
+                />
               </div>
             </div>
           </div>
