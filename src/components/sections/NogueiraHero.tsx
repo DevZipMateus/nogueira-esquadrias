@@ -1,4 +1,3 @@
-
 import { ArrowRight, Shield, Award, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -23,6 +22,9 @@ const NogueiraHero = () => {
           backgroundImage: `url('/lovable-uploads/be4a3387-6222-41e0-8219-0bd514da91c1.png')`,
         }}
       ></div>
+      
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/60"></div>
       
       {/* Background Pattern */}
       <div 
