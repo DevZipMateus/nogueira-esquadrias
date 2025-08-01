@@ -15,9 +15,19 @@ const NogueiraHero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center bg-gradient-primary overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url('/lovable-uploads/aa03f60a-3e69-4100-8bcc-d8a6c871676a.png')`,
+        }}
+      ></div>
+      
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/60"></div>
+      
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-black/20"></div>
       <div 
         className="absolute inset-0 opacity-10"
         style={{
