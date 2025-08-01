@@ -56,8 +56,8 @@ const NogueiraHeader = () => {
             >
               <div className="w-16 h-16 flex items-center justify-center">
                 <img 
-                  src="/lovable-uploads/b7ba1a08-6e0c-4679-af14-a56a37947624.png" 
-                  alt="Nogueira Esquadrias"
+                  src="/lovable-uploads/36048940-5c6b-4c17-9ff7-1586aa348f74.png" 
+                  alt="Nogueira Esquadrias - Logo"
                   className="w-16 h-16 object-contain"
                 />
               </div>

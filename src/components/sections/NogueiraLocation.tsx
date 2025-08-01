@@ -132,7 +132,7 @@ const NogueiraLocation = () => {
             <div className="relative">
               <div className="aspect-square lg:aspect-[4/3] rounded-2xl overflow-hidden shadow-elevation border border-border/50">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.8234567891234!2d-51.1234567!3d-30.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAv.%20da%20Serraria%2C%201151%20-%20Esp%C3%ADrito%20Santo%2C%20Porto%20Alegre%20-%20RS!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.123!2d-51.191!3d-30.087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAV%20DA%20SERRARIA%2C%201151%20-%20ESP%C3%8DRITO%20SANTO%2C%20Porto%20Alegre%20-%20RS!5e0!3m2!1spt-BR!2sbr!4v1704720000000!5m2!1spt-BR!2sbr"
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 
