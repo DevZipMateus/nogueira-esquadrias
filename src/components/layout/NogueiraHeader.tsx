@@ -42,7 +42,7 @@ const NogueiraHeader = () => {
           : ''
       )}
       style={{
-        background: 'linear-gradient(to right, white 0%, white 10%, #0070F0 20%, #0070F0 100%)'
+        background: 'linear-gradient(to right, white 0%, white 10%, #00adef 20%, #00adef 100%)'
       }}
     >
       <div className="max-w-7xl mx-auto px-2 xs:px-3 sm:px-4 lg:px-6 xl:px-8">
@@ -119,7 +119,7 @@ const NogueiraHeader = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-white/20 bg-blue-600/95 backdrop-blur-md">
+          <div className="lg:hidden border-t border-white/20" style={{ backgroundColor: 'rgba(0, 173, 239, 0.95)', backdropFilter: 'blur(12px)' }}>
             <nav className="py-2 xs:py-3 sm:py-4 space-y-0.5 xs:space-y-1 sm:space-y-2 max-h-[calc(100vh-4rem)] overflow-y-auto">
               {navigationItems.map((item) => (
                 <button
