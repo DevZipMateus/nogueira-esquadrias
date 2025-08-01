@@ -24,9 +24,6 @@ const NogueiraHero = () => {
         }}
       ></div>
       
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/60"></div>
-      
       {/* Background Pattern */}
       <div 
         className="absolute inset-0 opacity-10"
