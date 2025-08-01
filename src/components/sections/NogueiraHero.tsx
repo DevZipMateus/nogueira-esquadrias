@@ -33,7 +33,7 @@ const NogueiraHero = () => {
           <div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-lg">
               Nogueira
-              <span className="block text-yellow-400 drop-shadow-lg">Esquadrias</span>
+              <span className="block text-blue-400 drop-shadow-lg">Esquadrias</span>
             </h1>
             <p className="text-xl sm:text-2xl md:text-3xl font-medium mb-4 text-white drop-shadow-md">
               em Alumínio & Vidros
@@ -46,17 +46,17 @@ const NogueiraHero = () => {
           {/* Features */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-12 max-w-3xl mx-auto">
             <div className="flex flex-col items-center text-center p-4 bg-black/50 border border-white/30 rounded-xl backdrop-blur-sm">
-              <Award className="h-8 w-8 mb-3 text-yellow-400" aria-hidden="true" />
+              <Award className="h-8 w-8 mb-3 text-blue-400" aria-hidden="true" />
               <h3 className="font-semibold mb-1 text-white drop-shadow-md">30 Anos</h3>
               <p className="text-sm text-gray-200 drop-shadow-sm">de Experiência</p>
             </div>
             <div className="flex flex-col items-center text-center p-4 bg-black/50 border border-white/30 rounded-xl backdrop-blur-sm">
-              <Shield className="h-8 w-8 mb-3 text-yellow-400" aria-hidden="true" />
+              <Shield className="h-8 w-8 mb-3 text-blue-400" aria-hidden="true" />
               <h3 className="font-semibold mb-1 text-white drop-shadow-md">Qualidade</h3>
               <p className="text-sm text-gray-200 drop-shadow-sm">Garantida</p>
             </div>
             <div className="flex flex-col items-center text-center p-4 bg-black/50 border border-white/30 rounded-xl backdrop-blur-sm">
-              <Clock className="h-8 w-8 mb-3 text-yellow-400" aria-hidden="true" />
+              <Clock className="h-8 w-8 mb-3 text-blue-400" aria-hidden="true" />
               <h3 className="font-semibold mb-1 text-white drop-shadow-md">Atendimento</h3>
               <p className="text-sm text-gray-200 drop-shadow-sm">RS e SC</p>
             </div>
@@ -65,9 +65,9 @@ const NogueiraHero = () => {
           {/* Description */}
           <div className="mb-12">
             <p className="text-lg sm:text-xl text-white max-w-3xl mx-auto leading-relaxed drop-shadow-md">
-              Especialistas em <strong className="text-yellow-400">esquadrias de alumínio</strong> e <strong className="text-yellow-400">vidro temperado</strong>. 
+              Especialistas em <strong className="text-blue-400">esquadrias de alumínio</strong> e <strong className="text-blue-400">vidro temperado</strong>. 
               Fabricamos sob medida: portões, janelas, box para banheiro e muito mais, 
-              sempre com <strong className="text-yellow-400">qualidade, responsabilidade e segurança</strong>.
+              sempre com <strong className="text-blue-400">qualidade, responsabilidade e segurança</strong>.
             </p>
           </div>
 
@@ -96,7 +96,7 @@ const NogueiraHero = () => {
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 text-white">
               <a 
                 href="tel:+5551985500738"
-                className="hover:text-yellow-400 transition-colors drop-shadow-md font-medium"
+                className="hover:text-blue-400 transition-colors drop-shadow-md font-medium"
                 aria-label="Ligar para (51) 98550-0738"
               >
                 📞 (51) 98550-0738
@@ -104,7 +104,7 @@ const NogueiraHero = () => {
               <span className="hidden sm:inline text-white/60">|</span>
               <a 
                 href="tel:+55513022528"
-                className="hover:text-yellow-400 transition-colors drop-shadow-md font-medium"
+                className="hover:text-blue-400 transition-colors drop-shadow-md font-medium"
                 aria-label="Ligar para (51) 3022-5280"
               >
                 📞 (51) 3022-5280
