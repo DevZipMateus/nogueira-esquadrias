@@ -6,11 +6,12 @@ import { ThemeProvider } from '@/components/providers/ThemeProvider';
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="light" storageKey="nogueira-ui-theme">
       <Router>
         <div className="min-h-screen bg-background text-foreground">
           <Routes>
             <Route path="/" element={<NogueiraEsquadrias />} />
+            <Route path="*" element={<NogueiraEsquadrias />} />
           </Routes>
           <Toaster />
         </div>
