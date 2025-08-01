@@ -20,7 +20,7 @@ const NogueiraHero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url('/lovable-uploads/aa03f60a-3e69-4100-8bcc-d8a6c871676a.png')`,
+          backgroundImage: `url('/lovable-uploads/be4a3387-6222-41e0-8219-0bd514da91c1.png')`,
         }}
       ></div>
       
