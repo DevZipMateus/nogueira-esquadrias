@@ -49,14 +49,14 @@ const GalleryCarousel = ({ slides, onImageClick }: GalleryCarouselProps) => {
           {slides.map((slide, index) => (
             <div key={index} className="min-w-full h-full relative">
               <Card 
-                className="group cursor-pointer overflow-hidden border-0 shadow-md hover:shadow-lg transition-all duration-300 h-full"
+                className="group cursor-pointer overflow-hidden border-0 shadow-md hover:shadow-lg transition-all duration-300 h-full bg-gray-50"
                 onClick={() => onImageClick?.(slide.src)}
               >
-                <CardContent className="p-0 relative h-full">
+                <CardContent className="p-0 relative h-full flex items-center justify-center">
                   <img 
                     src={slide.src} 
                     alt={slide.alt}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <Eye className="h-8 w-8 text-white" />
