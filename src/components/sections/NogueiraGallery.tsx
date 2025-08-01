@@ -1,14 +1,12 @@
+
 import { useState, useEffect, useRef } from 'react';
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from '@/components/ui/button';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
-import { Phone, Eye } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import GalleryCarousel from '@/components/ui/GalleryCarousel';
 
 const NogueiraGallery = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [api, setApi] = useState<CarouselApi>();
-  const [mainApi, setMainApi] = useState<CarouselApi>();
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -32,32 +30,6 @@ const NogueiraGallery = () => {
       }
     };
   }, []);
-
-  // Auto-scroll for mobile carousel
-  useEffect(() => {
-    if (!api) {
-      return;
-    }
-
-    const interval = setInterval(() => {
-      api.scrollNext();
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [api]);
-
-  // Auto-scroll for main carousel
-  useEffect(() => {
-    if (!mainApi) {
-      return;
-    }
-
-    const interval = setInterval(() => {
-      mainApi.scrollNext();
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [mainApi]);
 
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/5551985500738?text=Olá!%20Vi%20os%20projetos%20na%20galeria%20e%20gostaria%20de%20um%20orçamento%20personalizado.', '_blank');
@@ -106,42 +78,12 @@ const NogueiraGallery = () => {
           </p>
         </div>
 
-        {/* Main Carousel for all screen sizes */}
+        {/* Unified Carousel */}
         <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'} mb-8 xs:mb-12 sm:mb-16`}>
-          <Carousel 
-            className="w-full max-w-4xl mx-auto"
-            setApi={setMainApi}
-            opts={{
-              loop: true,
-              align: "center",
-            }}
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {galleryImages.map((image, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card 
-                    className="group cursor-pointer overflow-hidden border-0 shadow-md hover:shadow-lg transition-all duration-300"
-                    onClick={() => setSelectedImage(image.src)}
-                  >
-                    <CardContent className="p-0 relative">
-                      <div className="aspect-square overflow-hidden">
-                        <img 
-                          src={image.src} 
-                          alt={image.alt}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
-                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                          <Eye className="h-6 w-6 text-white" />
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden sm:flex" />
-            <CarouselNext className="hidden sm:flex" />
-          </Carousel>
+          <GalleryCarousel 
+            slides={galleryImages}
+            onImageClick={setSelectedImage}
+          />
         </div>
 
         <div className={`text-center ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '400ms' }}>
