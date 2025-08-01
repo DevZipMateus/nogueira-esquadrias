@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -38,9 +37,12 @@ const NogueiraHeader = () => {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled 
-          ? 'bg-gradient-to-r from-cyan-400 via-cyan-200 via-cyan-100 to-cyan-50 backdrop-blur-md shadow-elevation border-b border-border' 
-          : 'bg-gradient-to-r from-cyan-400 via-cyan-200 via-cyan-100 to-cyan-50'
+          ? 'backdrop-blur-md shadow-elevation border-b border-border' 
+          : ''
       )}
+      style={{
+        background: 'linear-gradient(to right, white 0%, white 10%, #3b82f6 20%, #3b82f6 100%)'
+      }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -67,7 +69,7 @@ const NogueiraHeader = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-slate-800 hover:text-blue-600 transition-colors duration-200 font-medium"
+                className="text-white hover:text-blue-200 transition-colors duration-200 font-medium"
               >
                 {item.label}
               </button>
@@ -77,23 +79,23 @@ const NogueiraHeader = () => {
           {/* Contact Info & Mobile Menu */}
           <div className="flex items-center space-x-4">
             {/* Contact Info - Hidden on mobile */}
-            <div className="hidden xl:flex items-center space-x-4 text-sm text-slate-700">
+            <div className="hidden xl:flex items-center space-x-4 text-sm text-white">
               <a 
                 href="tel:+5551985500738"
-                className="flex items-center space-x-2 hover:text-blue-600 transition-colors"
+                className="flex items-center space-x-2 hover:text-blue-200 transition-colors"
                 aria-label="Ligar para (51) 98550-0738"
               >
                 <Phone className="h-4 w-4" />
                 <span>(51) 98550-0738</span>
               </a>
-              <span className="w-px h-4 bg-slate-300"></span>
+              <span className="w-px h-4 bg-white/30"></span>
               <a 
                 href="mailto:nogueiraesquadriasdealuminio@gmail.com"
-                className="flex items-center space-x-2 hover:text-blue-600 transition-colors"
+                className="flex items-center space-x-2 hover:text-blue-200 transition-colors"
                 aria-label="Enviar email"
               >
                 <Mail className="h-4 w-4" />
-                <span className="hidden 2xl:inline text-slate-700">Email</span>
+                <span className="hidden 2xl:inline text-white">Email</span>
               </a>
             </div>
 
@@ -101,7 +103,7 @@ const NogueiraHeader = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="lg:hidden text-slate-800 hover:text-blue-600"
+              className="lg:hidden text-white hover:text-blue-200"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
             >
@@ -112,28 +114,28 @@ const NogueiraHeader = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-slate-200 bg-white/95 backdrop-blur-md">
+          <div className="lg:hidden border-t border-white/20 bg-blue-600/95 backdrop-blur-md">
             <nav className="py-4 space-y-2">
               {navigationItems.map((item) => (
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-4 py-2 text-slate-800 hover:bg-slate-100 hover:text-blue-600 transition-colors font-medium rounded-md"
+                  className="block w-full text-left px-4 py-2 text-white hover:bg-white/10 hover:text-blue-100 transition-colors font-medium rounded-md"
                 >
                   {item.label}
                 </button>
               ))}
-              <div className="border-t border-slate-200 pt-4 px-4 space-y-2">
+              <div className="border-t border-white/20 pt-4 px-4 space-y-2">
                 <a 
                   href="tel:+5551985500738"
-                  className="flex items-center space-x-3 py-2 text-slate-700 hover:text-blue-600 transition-colors"
+                  className="flex items-center space-x-3 py-2 text-white hover:text-blue-100 transition-colors"
                 >
                   <Phone className="h-4 w-4" />
                   <span>(51) 98550-0738</span>
                 </a>
                 <a 
                   href="mailto:nogueiraesquadriasdealuminio@gmail.com"
-                  className="flex items-center space-x-3 py-2 text-slate-700 hover:text-blue-600 transition-colors"
+                  className="flex items-center space-x-3 py-2 text-white hover:text-blue-100 transition-colors"
                 >
                   <Mail className="h-4 w-4" />
                   <span>Enviar Email</span>
