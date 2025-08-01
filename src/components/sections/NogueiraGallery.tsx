@@ -1,13 +1,13 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from '@/components/ui/button';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
 import { Phone, Eye } from 'lucide-react';
 
 const NogueiraGallery = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [api, setApi] = useState<CarouselApi>();
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -31,6 +31,18 @@ const NogueiraGallery = () => {
       }
     };
   }, []);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [api]);
 
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/5551985500738?text=Olá!%20Vi%20os%20projetos%20na%20galeria%20e%20gostaria%20de%20um%20orçamento%20personalizado.', '_blank');
@@ -79,7 +91,6 @@ const NogueiraGallery = () => {
           </p>
         </div>
 
-        {/* Desktop Gallery Grid */}
         <div className="hidden lg:block">
           <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 mb-8 xs:mb-12 sm:mb-16 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
             {galleryImages.map((image, index) => (
@@ -105,10 +116,15 @@ const NogueiraGallery = () => {
           </div>
         </div>
 
-        {/* Mobile Carousel */}
         <div className="lg:hidden">
           <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
-            <Carousel className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto mb-8">
+            <Carousel 
+              className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto mb-8"
+              setApi={setApi}
+              opts={{
+                loop: true,
+              }}
+            >
               <CarouselContent>
                 {galleryImages.map((image, index) => (
                   <CarouselItem key={index}>
@@ -132,7 +148,6 @@ const NogueiraGallery = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
         <div className={`text-center ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '400ms' }}>
           <div className="bg-gradient-subtle rounded-2xl p-4 xs:p-6 sm:p-8 lg:p-12 max-w-4xl mx-auto">
             <h3 className="text-lg xs:text-xl sm:text-2xl lg:text-3xl font-bold text-foreground mb-2 xs:mb-3 sm:mb-4 leading-tight">
@@ -156,7 +171,6 @@ const NogueiraGallery = () => {
           </div>
         </div>
 
-        {/* Modal for enlarged image */}
         {selectedImage && (
           <div 
             className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
