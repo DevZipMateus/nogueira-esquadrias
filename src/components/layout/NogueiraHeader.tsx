@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -41,7 +42,7 @@ const NogueiraHeader = () => {
           : ''
       )}
       style={{
-        background: 'linear-gradient(to right, white 0%, white 10%, #3b82f6 20%, #3b82f6 100%)'
+        background: 'linear-gradient(to right, white 0%, white 10%, #0070F0 20%, #0070F0 100%)'
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
