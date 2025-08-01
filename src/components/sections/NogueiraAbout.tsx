@@ -102,16 +102,16 @@ const NogueiraAbout = () => {
             </div>
           </div>
 
-          {/* Image Placeholder */}
+          {/* Updated Image */}
           <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
             <div className="relative">
               <div className="aspect-square rounded-2xl bg-gradient-subtle overflow-hidden shadow-elevation">
                 <div 
                   className="w-full h-full bg-cover bg-center opacity-90 hover:opacity-100 transition-opacity duration-300"
                   style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1487887235947-a955ef187fcc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')`,
+                    backgroundImage: `url('/lovable-uploads/760534a5-f1ec-4718-8b56-6fa73c2370ad.png')`,
                   }}
-                  aria-label="Trabalhos em esquadrias de alumínio"
+                  aria-label="Alguns dos nossos serviços - Esquadrias de alumínio"
                 ></div>
               </div>
               <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-elevation">
