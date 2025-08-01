@@ -1,7 +1,6 @@
 
 import { ArrowRight, Shield, Award, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { BackgroundBeams } from '@/components/ui/background-beams';
 
 const NogueiraHero = () => {
   const handleWhatsAppClick = () => {
@@ -27,14 +26,11 @@ const NogueiraHero = () => {
       
       {/* Dark overlay for better text readability */}
       <div className="absolute inset-0 bg-black/60"></div>
-      
-      {/* Background Beams Effect */}
-      <BackgroundBeams />
 
       <div className="relative z-10 section-container">
         <div className="max-w-4xl mx-auto text-center text-white">
           {/* Main Heading */}
-          <div className="animate-fade-in">
+          <div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               Nogueira
               <span className="block text-accent">Esquadrias</span>
@@ -48,7 +44,7 @@ const NogueiraHero = () => {
           </div>
 
           {/* Features */}
-          <div className="animate-slide-in grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-12 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-12 max-w-3xl mx-auto">
             <div className="flex flex-col items-center text-center p-4 bg-white/10 rounded-xl backdrop-blur-sm">
               <Award className="h-8 w-8 mb-3 text-accent" aria-hidden="true" />
               <h3 className="font-semibold mb-1">30 Anos</h3>
@@ -67,7 +63,7 @@ const NogueiraHero = () => {
           </div>
 
           {/* Description */}
-          <div className="animate-fade-in mb-12">
+          <div className="mb-12">
             <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
               Especialistas em <strong>esquadrias de alumínio</strong> e <strong>vidro temperado</strong>. 
               Fabricamos sob medida: portões, janelas, box para banheiro e muito mais, 
@@ -76,7 +72,7 @@ const NogueiraHero = () => {
           </div>
 
           {/* Call to Action */}
-          <div className="animate-fade-in flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               onClick={handleWhatsAppClick}
               className="bg-green-600 hover:bg-green-700 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-elevation hover:shadow-lg transition-all duration-300 group"
@@ -96,7 +92,7 @@ const NogueiraHero = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="animate-slide-in mt-16 pt-8 border-t border-white/20">
+          <div className="mt-16 pt-8 border-t border-white/20">
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 text-blue-200">
               <a 
                 href="tel:+5551985500738"
