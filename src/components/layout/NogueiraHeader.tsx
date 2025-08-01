@@ -38,8 +38,8 @@ const NogueiraHeader = () => {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled 
-          ? 'bg-gradient-to-r from-white via-white to-[#00BFFF] backdrop-blur-md shadow-elevation border-b border-border' 
-          : 'bg-gradient-to-r from-white via-white to-[#00BFFF]'
+          ? 'bg-gradient-to-r from-cyan-50 via-cyan-100 to-cyan-400 backdrop-blur-md shadow-elevation border-b border-border' 
+          : 'bg-gradient-to-r from-cyan-50 via-cyan-100 to-cyan-400'
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,20 +51,12 @@ const NogueiraHeader = () => {
               className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
               aria-label="Nogueira Esquadrias - Página inicial"
             >
-              <div className="w-12 h-12 flex items-center justify-center">
+              <div className="w-16 h-16 flex items-center justify-center">
                 <img 
-                  src="/lovable-uploads/097a7f34-6632-412c-b133-978b260d795b.png" 
+                  src="/lovable-uploads/b7ba1a08-6e0c-4679-af14-a56a37947624.png" 
                   alt="Nogueira Esquadrias"
-                  className="w-12 h-12 object-contain"
+                  className="w-16 h-16 object-contain"
                 />
-              </div>
-              <div className="hidden sm:block">
-                <h1 className="text-lg font-bold text-slate-800">
-                  Nogueira Esquadrias
-                </h1>
-                <p className="text-sm text-slate-600">
-                  Alumínio & Vidros
-                </p>
               </div>
             </button>
           </div>
