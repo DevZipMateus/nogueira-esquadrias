@@ -29,6 +29,7 @@ const NogueiraHeader = () => {
     { label: 'Início', href: 'hero' },
     { label: 'Sobre', href: 'sobre' },
     { label: 'Serviços', href: 'servicos' },
+    { label: 'Projetos', href: 'projetos' },
     { label: 'Localização', href: 'localizacao' },
     { label: 'Contato', href: 'contato' }
   ];
@@ -65,7 +66,7 @@ const NogueiraHeader = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6 2xl:space-x-8">
+          <nav className="hidden lg:flex items-center space-x-2 xl:space-x-4 2xl:space-x-6">
             {navigationItems.map((item) => (
               <button
                 key={item.href}

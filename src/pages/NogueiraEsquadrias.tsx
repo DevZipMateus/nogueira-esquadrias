@@ -8,6 +8,7 @@ import LazySection from '@/components/ui/LazySection';
 // Lazy load components for better performance
 const About = lazy(() => import('@/components/sections/NogueiraAbout'));
 const Services = lazy(() => import('@/components/sections/NogueiraServices'));
+const Gallery = lazy(() => import('@/components/sections/NogueiraGallery'));
 const Location = lazy(() => import('@/components/sections/NogueiraLocation'));
 const Contact = lazy(() => import('@/components/sections/NogueiraContact'));
 const Footer = lazy(() => import('@/components/layout/NogueiraFooter'));
@@ -28,6 +29,12 @@ const NogueiraEsquadrias = () => {
         <LazySection>
           <Suspense fallback={<div className="h-96 animate-pulse bg-muted rounded" />}>
             <Services />
+          </Suspense>
+        </LazySection>
+        
+        <LazySection>
+          <Suspense fallback={<div className="h-96 animate-pulse bg-muted rounded" />}>
+            <Gallery />
           </Suspense>
         </LazySection>
         
