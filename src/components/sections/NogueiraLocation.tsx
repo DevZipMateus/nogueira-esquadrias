@@ -31,7 +31,7 @@ const NogueiraLocation = () => {
 
   const contactInfo = [
     {
-      icon: <MapPin className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />,
+      icon: <MapPin className="h-4 w-4 xs:h-5 xs:w-5 sm:h-6 sm:w-6 text-primary" />,
       title: 'Endereço',
       details: 'AV DA SERRARIA, 1151 - ESPÍRITO SANTO',
       subtitle: 'Porto Alegre - RS',
@@ -39,7 +39,7 @@ const NogueiraLocation = () => {
       actionText: 'Ver no Google Maps'
     },
     {
-      icon: <Phone className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />,
+      icon: <Phone className="h-4 w-4 xs:h-5 xs:w-5 sm:h-6 sm:w-6 text-primary" />,
       title: 'Telefones',
       details: '(51) 98550-0738',
       subtitle: '(51) 3022-5280',
@@ -47,7 +47,7 @@ const NogueiraLocation = () => {
       actionText: 'Ligar Agora'
     },
     {
-      icon: <Mail className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />,
+      icon: <Mail className="h-4 w-4 xs:h-5 xs:w-5 sm:h-6 sm:w-6 text-primary" />,
       title: 'Email',
       details: 'nogueiraesquadriasdealuminio@gmail.com',
       subtitle: 'Resposta rápida garantida',
@@ -55,7 +55,7 @@ const NogueiraLocation = () => {
       actionText: 'Enviar Email'
     },
     {
-      icon: <Clock className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />,
+      icon: <Clock className="h-4 w-4 xs:h-5 xs:w-5 sm:h-6 sm:w-6 text-primary" />,
       title: 'Atendimento',
       details: 'Segunda à Sexta: 8h às 18h',
       subtitle: 'Sábados: 8h às 12h',
@@ -65,39 +65,39 @@ const NogueiraLocation = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="localizacao" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-secondary/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`text-center max-w-4xl mx-auto mb-12 sm:mb-16 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
-          <div className="inline-block px-3 sm:px-4 py-2 mb-4 sm:mb-6 text-xs sm:text-sm font-medium text-primary bg-primary/10 rounded-full">
+    <section ref={sectionRef} id="localizacao" className="py-8 xs:py-12 sm:py-16 md:py-20 lg:py-24 bg-secondary/50">
+      <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
+        <div className={`text-center max-w-4xl mx-auto mb-8 xs:mb-12 sm:mb-16 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+          <div className="inline-block px-2 xs:px-3 sm:px-4 py-1.5 xs:py-2 mb-3 xs:mb-4 sm:mb-6 text-xs xs:text-sm font-medium text-primary bg-primary/10 rounded-full">
             Localização e Contato
           </div>
-          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-foreground font-display">
+          <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 xs:mb-4 sm:mb-6 text-foreground font-display leading-tight">
             Onde nos <span className="text-primary">Encontrar</span>
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-muted-foreground max-w-3xl leading-relaxed mx-auto">
+          <p className="text-xs xs:text-sm sm:text-base lg:text-lg xl:text-xl text-muted-foreground max-w-3xl leading-relaxed mx-auto px-2">
             Estamos localizados em Porto Alegre - RS, atendendo toda a região Sul com qualidade e agilidade.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 xs:gap-8 sm:gap-12 lg:gap-16">
           {/* Contact Information */}
           <div className={`${isVisible ? 'animate-slide-in' : 'opacity-0'}`}>
-            <div className="space-y-4 sm:space-y-6">
+            <div className="space-y-3 xs:space-y-4 sm:space-y-6">
               {contactInfo.map((item, index) => (
                 <Card key={index} className="card-hover border-border/50">
-                  <CardContent className="p-4 sm:p-6">
+                  <CardContent className="p-3 xs:p-4 sm:p-6">
                     <div className="flex items-start">
-                      <div className="mr-3 sm:mr-4 flex h-10 w-10 sm:h-12 sm:w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10">
+                      <div className="mr-2 xs:mr-3 sm:mr-4 flex h-8 w-8 xs:h-10 xs:w-10 sm:h-12 sm:w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10">
                         {item.icon}
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-base sm:text-lg font-semibold text-foreground mb-1">
+                        <h4 className="text-sm xs:text-base sm:text-lg font-semibold text-foreground mb-1 leading-tight">
                           {item.title}
                         </h4>
-                        <p className="text-sm sm:text-base text-muted-foreground mb-1 break-words">
+                        <p className="text-xs xs:text-sm sm:text-base text-muted-foreground mb-0.5 xs:mb-1 break-words leading-tight">
                           {item.details}
                         </p>
-                        <p className="text-xs sm:text-sm text-muted-foreground mb-3">
+                        <p className="text-xs sm:text-sm text-muted-foreground mb-2 xs:mb-3 leading-tight">
                           {item.subtitle}
                         </p>
                         {item.action && item.actionText && (
@@ -105,7 +105,7 @@ const NogueiraLocation = () => {
                             href={item.action}
                             target={item.action.startsWith('http') ? '_blank' : undefined}
                             rel={item.action.startsWith('http') ? 'noopener noreferrer' : undefined}
-                            className="inline-block text-xs sm:text-sm font-medium text-primary hover:text-primary/80 hover:underline transition-colors"
+                            className="inline-block text-xs xs:text-sm font-medium text-primary hover:text-primary/80 hover:underline transition-colors"
                           >
                             {item.actionText}
                           </a>
@@ -117,11 +117,11 @@ const NogueiraLocation = () => {
               ))}
             </div>
 
-            <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-primary/5 rounded-xl border border-primary/20">
-              <h4 className="font-semibold text-foreground mb-2 text-sm sm:text-base">Área de Atendimento</h4>
+            <div className="mt-4 xs:mt-6 sm:mt-8 p-3 xs:p-4 sm:p-6 bg-primary/5 rounded-xl border border-primary/20">
+              <h4 className="font-semibold text-foreground mb-1 xs:mb-2 text-xs xs:text-sm sm:text-base leading-tight">Área de Atendimento</h4>
               <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
-                Atendemos todo o <strong className="text-foreground">Rio Grande do Sul</strong> e 
-                <strong className="text-foreground"> Santa Catarina</strong>. 
+                Atendemos todo o <strong className="text-foreground">Rio Grande do Sul</strong> e{' '}
+                <strong className="text-foreground">Santa Catarina</strong>. 
                 Entre em contato para verificar disponibilidade em sua região.
               </p>
             </div>
@@ -145,11 +145,11 @@ const NogueiraLocation = () => {
               </div>
               
               {/* Map overlay with company info */}
-              <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 bg-white/95 backdrop-blur-sm p-3 sm:p-4 rounded-xl shadow-lg border border-border/50">
-                <h5 className="font-semibold text-foreground text-xs sm:text-sm mb-1">
+              <div className="absolute bottom-2 xs:bottom-3 sm:bottom-4 left-2 xs:left-3 sm:left-4 right-2 xs:right-3 sm:right-4 bg-white/95 backdrop-blur-sm p-2 xs:p-3 sm:p-4 rounded-xl shadow-lg border border-border/50">
+                <h5 className="font-semibold text-foreground text-xs xs:text-sm mb-0.5 xs:mb-1 leading-tight">
                   Nogueira Esquadrias
                 </h5>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-xs text-muted-foreground leading-tight">
                   AV DA SERRARIA, 1151 - ESPÍRITO SANTO<br/>
                   Porto Alegre - RS
                 </p>

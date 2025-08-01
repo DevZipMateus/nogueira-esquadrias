@@ -71,6 +71,12 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      spacing: {
+        '18': '4.5rem',
+      },
+      minHeight: {
+        '44': '44px', // Minimum touch target for mobile
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
