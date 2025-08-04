@@ -62,34 +62,65 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  /* Better touch targets for mobile */
+  button, a, input, textarea, select {
+    min-height: 44px;
+    min-width: 44px;
+    touch-action: manipulation;
+  }
+  
+  /* Improve tap highlight */
+  * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
   }
 }
 
 @layer utilities {
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8;
   }
   
   .section-title {
-    @apply text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6 font-display;
+    @apply text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 xs:mb-6 font-display;
   }
   
   .section-subtitle {
-    @apply text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed;
+    @apply text-sm xs:text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed;
   }
   
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-elevation hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-elevation hover:-translate-y-1 active:translate-y-0;
   }
   
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+  
+  .safe-area-inset {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  
+  .safe-area-inset-bottom {
+    margin-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .safe-area-inset-top {
+    margin-top: env(safe-area-inset-top);
   }
 }
 
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Account for fixed header */
 }
 
 /* Performance optimizations */
@@ -113,4 +144,39 @@ img {
 /* Loading states */
 .loading-skeleton {
   @apply animate-pulse bg-muted rounded;
+}
+
+/* Mobile-first responsive improvements */
+@media (max-width: 640px) {
+  .text-responsive {
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+  }
+  
+  .heading-responsive {
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+  }
+}
+
+/* Better focus states for accessibility */
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* Improved scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
 }
