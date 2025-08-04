@@ -34,11 +34,15 @@ const NogueiraWhatsAppFloat = () => {
     <button
       onClick={handleClick}
       className={cn(
-        'fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 active:bg-green-700 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 group touch-manipulation',
-        'min-w-[56px] min-h-[56px] safe-area-inset-bottom',
+        'fixed bottom-4 right-4 z-40 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 active:bg-green-700 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 group touch-manipulation',
+        'min-w-[56px] min-h-[56px]',
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0',
         isAnimating ? 'animate-bounce' : ''
       )}
+      style={{
+        marginBottom: 'env(safe-area-inset-bottom, 0px)',
+        marginRight: 'env(safe-area-inset-right, 0px)'
+      }}
       aria-label="Contato via WhatsApp para orçamento de esquadrias"
     >
       <svg 

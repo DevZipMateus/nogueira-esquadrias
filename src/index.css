@@ -68,13 +68,32 @@
   /* Better touch targets for mobile */
   button, a, input, textarea, select {
     min-height: 44px;
-    min-width: 44px;
     touch-action: manipulation;
+  }
+  
+  /* Ensure buttons don't get cut off */
+  button {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
   
   /* Improve tap highlight */
   * {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Prevent horizontal overflow */
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  /* Improve mobile text rendering */
+  @media (max-width: 640px) {
+    html {
+      text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
   }
 }
 
@@ -115,6 +134,17 @@
   .safe-area-inset-top {
     margin-top: env(safe-area-inset-top);
   }
+  
+  /* Mobile-specific button improvements */
+  @media (max-width: 640px) {
+    .mobile-button-fix {
+      min-width: 0;
+      max-width: 100%;
+      white-space: normal;
+      word-break: break-word;
+      line-height: 1.3;
+    }
+  }
 }
 
 /* Smooth scrolling */
@@ -154,6 +184,17 @@ img {
   
   .heading-responsive {
     font-size: clamp(1.5rem, 8vw, 2.5rem);
+  }
+  
+  /* Prevent button overflow */
+  .container, .max-w-7xl, .max-w-5xl, .max-w-4xl {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Ensure buttons stay within viewport */
+  button {
+    max-width: calc(100vw - 2rem);
   }
 }
 
