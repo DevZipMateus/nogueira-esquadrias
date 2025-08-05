@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from 'react';
 import { MapPin, Clock, Phone, Mail } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
@@ -56,8 +57,8 @@ const NogueiraLocation = () => {
     {
       icon: <Clock className="h-4 w-4 xs:h-5 xs:w-5 sm:h-6 sm:w-6 text-primary" />,
       title: 'Atendimento',
-      details: 'Segunda à Sexta: 8h às 18h',
-      subtitle: 'Sábados: 8h às 12h',
+      details: 'Segunda à Sexta: 8h às 12h e 13:30h às 18h',
+      subtitle: 'Sábados e Domingos: Fechado',
       action: null,
       actionText: null
     }

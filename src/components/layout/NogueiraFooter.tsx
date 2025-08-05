@@ -94,8 +94,8 @@ const NogueiraFooter = () => {
               <div className="flex items-start space-x-3">
                 <Clock className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
                 <div className="text-sm text-slate-300">
-                  <p>Segunda à Sexta: 8h às 18h</p>
-                  <p>Sábados: 8h às 12h</p>
+                  <p>Segunda à Sexta:</p>
+                  <p>8h às 12h e 13:30h às 18h</p>
                 </div>
               </div>
             </div>
