@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react';
 import { Shield, Award, Clock, Users, Target, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
@@ -53,17 +52,17 @@ const NogueiraAbout = () => {
   ];
 
   const achievements = [
-    { number: '30+', label: 'Anos de Experiência' },
-    { number: '1000+', label: 'Projetos Concluídos' },
+    { number: '30', label: 'Anos de Experiência do Profissional' },
+    { number: '3', label: 'Anos da Empresa' },
     { number: '100%', label: 'Clientes Satisfeitos' },
-    { number: '2', label: 'Estados Atendidos' }
+    { number: '1', label: 'Estado Atendido' }
   ];
 
   const differentials = [
     'Fabricação 100% sob medida',
     'Materiais de primeira qualidade',
-    'Equipe especializada e experiente',
-    'Atendimento em RS e SC',
+    'Profissional com 30 anos de experiência',
+    'Atendimento no Rio Grande do Sul',
     'Orçamento gratuito e sem compromisso',
     'Garantia em todos os produtos',
     'Manutenção e pós-venda',
@@ -78,11 +77,11 @@ const NogueiraAbout = () => {
             Sobre Nós
           </div>
           <h2 className="section-title">
-            30 Anos de <span className="text-primary">Tradição e Qualidade</span>
+            30 Anos de <span className="text-primary">Experiência Profissional</span>
           </h2>
           <p className="section-subtitle text-center mx-auto">
-            Profissional com 30 anos de experiência, atuando no mercado de esquadrias de alumínio e vidro temperado 
-            no Rio Grande do Sul e Santa Catarina, sempre buscando a satisfação dos clientes a cada serviço entregue.
+            Nossa empresa, com 3 anos no mercado, é liderada por um profissional com 30 anos de experiência em esquadrias de alumínio e vidro temperado 
+            no Rio Grande do Sul, sempre buscando a satisfação dos clientes a cada serviço entregue.
           </p>
         </div>
 
@@ -95,14 +94,14 @@ const NogueiraAbout = () => {
               </h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Há três décadas, a Nogueira Esquadrias iniciou sua trajetória no mercado de esquadrias de alumínio 
-                  e vidro temperado, sempre com o compromisso de oferecer produtos de alta qualidade e um atendimento 
-                  diferenciado aos nossos clientes.
+                  Nossa empresa foi fundada há 3 anos, mas é liderada por um profissional com 30 anos de experiência 
+                  no mercado de esquadrias de alumínio e vidro temperado. Essa vasta experiência garante a qualidade 
+                  e confiabilidade em cada projeto que desenvolvemos.
                 </p>
                 <p>
-                  Ao longo desses anos, nos consolidamos como referência no mercado, expandindo nosso atendimento 
-                  para todo o Rio Grande do Sul e Santa Catarina. Nossa experiência nos permite entregar soluções 
-                  personalizadas, sempre priorizando a qualidade, responsabilidade e segurança.
+                  Embora sejamos uma empresa jovem, trazemos décadas de conhecimento técnico e experiência prática, 
+                  oferecendo soluções modernas com a solidez de quem conhece profundamente o mercado. 
+                  Atendemos todo o Rio Grande do Sul com produtos de alta qualidade.
                 </p>
                 <p>
                   Cada projeto é desenvolvido sob medida, utilizando materiais de primeira linha e técnicas 

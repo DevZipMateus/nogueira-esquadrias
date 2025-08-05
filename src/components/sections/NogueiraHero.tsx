@@ -49,7 +49,7 @@ const NogueiraHero = () => {
               <div className="flex flex-col items-center text-center p-4 sm:p-6 bg-black/50 border border-white/30 rounded-xl backdrop-blur-sm transition-transform hover:scale-105">
                 <Award className="h-8 w-8 sm:h-10 sm:w-10 mb-3 text-blue-400 flex-shrink-0" aria-hidden="true" />
                 <h3 className="font-semibold mb-1 text-white drop-shadow-md text-base sm:text-lg">30 Anos</h3>
-                <p className="text-sm text-gray-200 drop-shadow-sm">de Experiência</p>
+                <p className="text-sm text-gray-200 drop-shadow-sm">Experiência Profissional</p>
               </div>
               <div className="flex flex-col items-center text-center p-4 sm:p-6 bg-black/50 border border-white/30 rounded-xl backdrop-blur-sm transition-transform hover:scale-105">
                 <Shield className="h-8 w-8 sm:h-10 sm:w-10 mb-3 text-blue-400 flex-shrink-0" aria-hidden="true" />
@@ -66,7 +66,7 @@ const NogueiraHero = () => {
             {/* Description */}
             <div className="mb-8 sm:mb-10">
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-md">
-                Especialistas em <strong className="text-blue-400">esquadrias de alumínio</strong> e <strong className="text-blue-400">vidro temperado</strong>. 
+                Profissional com <strong className="text-blue-400">30 anos de experiência</strong> em <strong className="text-blue-400">esquadrias de alumínio</strong> e <strong className="text-blue-400">vidro temperado</strong>. 
                 Fabricamos sob medida: portões, janelas, box para banheiro e muito mais, 
                 sempre com <strong className="text-blue-400">qualidade, responsabilidade e segurança</strong>.
               </p>

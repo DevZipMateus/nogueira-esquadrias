@@ -1,4 +1,3 @@
-
 import { MapPin, Phone, Mail, Instagram, Clock } from 'lucide-react';
 
 const NogueiraFooter = () => {
@@ -21,8 +20,8 @@ const NogueiraFooter = () => {
               </div>
             </div>
             <p className="text-slate-300 text-sm leading-relaxed">
-              30 anos de experiência em esquadrias de alumínio e vidro temperado, 
-              oferecendo qualidade, responsabilidade e segurança.
+              Empresa com 3 anos no mercado, liderada por profissional com 30 anos de experiência 
+              em esquadrias de alumínio e vidro temperado, oferecendo qualidade, responsabilidade e segurança.
             </p>
             <div className="italic text-primary text-sm font-medium">
               "Sua casa merece o melhor em alumínio e vidro."
@@ -108,7 +107,7 @@ const NogueiraFooter = () => {
           <div className="text-center">
             <h4 className="text-lg font-semibold mb-4 text-white">Área de Atendimento</h4>
             <p className="text-slate-300 text-sm max-w-2xl mx-auto">
-              Atendemos todo o <span className="text-white font-medium">Rio Grande do Sul</span> com equipe especializada 
+              Atendemos todo o <span className="text-white font-medium">Rio Grande do Sul</span> com profissional experiente 
               e produtos de alta qualidade.
             </p>
           </div>
@@ -123,7 +122,7 @@ const NogueiraFooter = () => {
             <div className="flex space-x-6">
               <span>Desenvolvido com qualidade</span>
               <span>|</span>
-              <span>30 anos de experiência</span>
+              <span>30 anos de experiência profissional</span>
             </div>
           </div>
         </div>
