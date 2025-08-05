@@ -59,7 +59,7 @@ const NogueiraHero = () => {
               <div className="flex flex-col items-center text-center p-4 sm:p-6 bg-black/50 border border-white/30 rounded-xl backdrop-blur-sm transition-transform hover:scale-105">
                 <Clock className="h-8 w-8 sm:h-10 sm:w-10 mb-3 text-blue-400 flex-shrink-0" aria-hidden="true" />
                 <h3 className="font-semibold mb-1 text-white drop-shadow-md text-base sm:text-lg">Atendimento</h3>
-                <p className="text-sm text-gray-200 drop-shadow-sm">RS e SC</p>
+                <p className="text-sm text-gray-200 drop-shadow-sm">Rio Grande do Sul</p>
               </div>
             </div>
 

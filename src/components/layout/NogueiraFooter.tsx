@@ -108,8 +108,7 @@ const NogueiraFooter = () => {
           <div className="text-center">
             <h4 className="text-lg font-semibold mb-4 text-white">Área de Atendimento</h4>
             <p className="text-slate-300 text-sm max-w-2xl mx-auto">
-              Atendemos todo o <span className="text-white font-medium">Rio Grande do Sul</span> e 
-              <span className="text-white font-medium"> Santa Catarina</span> com equipe especializada 
+              Atendemos todo o <span className="text-white font-medium">Rio Grande do Sul</span> com equipe especializada 
               e produtos de alta qualidade.
             </p>
           </div>

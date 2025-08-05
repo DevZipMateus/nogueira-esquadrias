@@ -2,9 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 import { Phone, Mail, MessageCircle, Send, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from "@/components/ui/card";
+
 const NogueiraContact = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
@@ -14,21 +16,26 @@ const NogueiraContact = () => {
     }, {
       threshold: 0.1
     });
+
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
+
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
     };
   }, []);
+
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/5551985500738?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20esquadrias%20de%20alumínio%20e%20vidro.', '_blank');
   };
+
   const handleInstagramClick = () => {
     window.open('https://www.instagram.com/nogueira_esquadrias.vidros', '_blank');
   };
+
   const contactMethods = [{
     icon: <MessageCircle className="h-8 w-8 text-green-600" />,
     title: 'WhatsApp',
@@ -66,7 +73,9 @@ const NogueiraContact = () => {
     buttonColor: 'bg-pink-600 hover:bg-pink-700',
     featured: false
   }];
-  return <section ref={sectionRef} id="contato" className="py-16 sm:py-20 md:py-24 bg-white">
+
+  return (
+    <section ref={sectionRef} id="contato" className="py-16 sm:py-20 md:py-24 bg-white">
       <div className="section-container">
         <div className={`text-center max-w-4xl mx-auto mb-16 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
           <div className="inline-block px-4 py-2 mb-6 text-sm font-medium text-primary bg-primary/10 rounded-full">
@@ -76,7 +85,7 @@ const NogueiraContact = () => {
             Fale <span className="text-primary">Conosco</span>
           </h2>
           <p className="section-subtitle text-center mx-auto">
-            Estamos prontos para atender suas necessidades em esquadrias de alumínio e vidro. 
+            Estamos prontos para atender suas necessidades em esquadrias de alumínio e vidro em todo o Rio Grande do Sul. 
             Entre em contato através de qualquer um de nossos canais de atendimento.
           </p>
         </div>
@@ -88,9 +97,10 @@ const NogueiraContact = () => {
 
         {/* Contact Methods Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {contactMethods.map((method, index) => <Card key={index} className={`card-hover border-border/50 ${method.featured ? 'ring-2 ring-green-200' : ''} ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{
-          animationDelay: `${index * 100}ms`
-        }}>
+          {contactMethods.map((method, index) => (
+            <Card key={index} className={`card-hover border-border/50 ${method.featured ? 'ring-2 ring-green-200' : ''} ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{
+              animationDelay: `${index * 100}ms`
+            }}>
               <CardContent className="p-6 text-center">
                 <div className="mb-4 flex justify-center">
                   <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center">
@@ -110,7 +120,8 @@ const NogueiraContact = () => {
                   {method.buttonText}
                 </Button>
               </CardContent>
-            </Card>)}
+            </Card>
+          ))}
         </div>
 
         {/* Business Hours & Additional Info */}
@@ -176,6 +187,8 @@ const NogueiraContact = () => {
           </Card>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default NogueiraContact;

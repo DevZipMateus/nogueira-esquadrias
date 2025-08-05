@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react';
 import { MapPin, Clock, Phone, Mail } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
@@ -75,7 +74,7 @@ const NogueiraLocation = () => {
             Onde nos <span className="text-primary">Encontrar</span>
           </h2>
           <p className="text-xs xs:text-sm sm:text-base lg:text-lg xl:text-xl text-muted-foreground max-w-3xl leading-relaxed mx-auto px-2">
-            Estamos localizados em Porto Alegre - RS, atendendo toda a região Sul com qualidade e agilidade.
+            Estamos localizados em Porto Alegre - RS, atendendo todo o Rio Grande do Sul com qualidade e agilidade.
           </p>
         </div>
 
@@ -120,8 +119,7 @@ const NogueiraLocation = () => {
             <div className="mt-4 xs:mt-6 sm:mt-8 p-3 xs:p-4 sm:p-6 bg-primary/5 rounded-xl border border-primary/20">
               <h4 className="font-semibold text-foreground mb-1 xs:mb-2 text-xs xs:text-sm sm:text-base leading-tight">Área de Atendimento</h4>
               <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
-                Atendemos todo o <strong className="text-foreground">Rio Grande do Sul</strong> e{' '}
-                <strong className="text-foreground">Santa Catarina</strong>. 
+                Atendemos todo o <strong className="text-foreground">Rio Grande do Sul</strong>. 
                 Entre em contato para verificar disponibilidade em sua região.
               </p>
             </div>
