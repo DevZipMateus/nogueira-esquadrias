@@ -1,3 +1,4 @@
+
 import { MapPin, Phone, Mail, Instagram, Clock } from 'lucide-react';
 
 const NogueiraFooter = () => {
@@ -96,6 +97,7 @@ const NogueiraFooter = () => {
                 <div className="text-sm text-slate-300">
                   <p>Segunda à Sexta:</p>
                   <p>8h às 12h e 13:30h às 18h</p>
+                  <p>Sábados: 8h às 12h</p>
                 </div>
               </div>
             </div>

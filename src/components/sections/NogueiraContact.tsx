@@ -137,7 +137,11 @@ const NogueiraContact = () => {
                   <span className="font-medium text-foreground">8h às 12h e 13:30h às 18h</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Sábados e Domingos:</span>
+                  <span>Sábados:</span>
+                  <span className="font-medium text-foreground">8h às 12h</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Domingos:</span>
                   <span className="font-medium text-foreground">Fechado</span>
                 </div>
               </div>

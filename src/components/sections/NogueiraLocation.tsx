@@ -58,7 +58,7 @@ const NogueiraLocation = () => {
       icon: <Clock className="h-4 w-4 xs:h-5 xs:w-5 sm:h-6 sm:w-6 text-primary" />,
       title: 'Atendimento',
       details: 'Segunda à Sexta: 8h às 12h e 13:30h às 18h',
-      subtitle: 'Sábados e Domingos: Fechado',
+      subtitle: 'Sábados: 8h às 12h | Domingos: Fechado',
       action: null,
       actionText: null
     }
